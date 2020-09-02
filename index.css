@@ -1,0 +1,47 @@
+* {
+  font-family: Arial, Helvetica;
+}
+
+center {
+  margin-top: 40vh;
+}
+center h1 {
+  font-size: 10em;
+  font-weight: 600;
+  text-shadow: 4px 4px 10px #0004;
+}
+
+NavBar {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 5vh;
+  background-color: #acacac;
+  margin: 0px;
+  width: 100vw;
+}
+NavBar #logo {
+  float: left;
+  color: white;
+  text-shadow: 3px 3px 5px #0005;
+  font-weight: 600;
+  font-size: 3em;
+  margin: 0px;
+}
+NavBar NavList {
+  float: right;
+  padding: 10px;
+  margin: 0px 50px;
+  height: 80%;
+}
+NavBar NavList a {
+  margin: 10px 10px;
+  font-size: 2em;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  text-shadow: 2px 2px 5px #0003;
+}
+NavBar NavList a:hover {
+  color: #bdbdbd;
+}
