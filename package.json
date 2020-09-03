@@ -4,7 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"serve": "copy-and-watch --watch src/**/*.{html,json,png,jpg,jpeg} src/**/{fonts,images}/* build | sass --no-source-map --watch src/:build/ | tsc -w"
+		"serve": "copy-and-watch --watch src/**/*.{html,json,png,jpg,jpeg} src/**/{fonts,images}/* build | sass --no-source-map --watch src/:build/ | tsc -w",
+		"build": "copy-and-watch src/**/*.{html,json,png,jpg,jpeg} src/**/{fonts,images}/* build | sass --no-source-map src/:build/ | tsc"
 	},
 	"author": "",
 	"license": "ISC",

@@ -15,7 +15,8 @@ window.onload = function() {
 
 	const element = $("#MainMessage");
 	if(element === null) throw "Could not find Main message";
-	const message = element as Element;
+	const message = element as HTMLElement;
+	message.style.display = "block"
 	const msgBlueprint = message.innerHTML;
 
 	let index: number = 0;
