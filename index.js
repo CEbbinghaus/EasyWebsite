@@ -11,6 +11,7 @@ window.onload = function () {
     if (element === null)
         throw "Could not find Main message";
     var message = element;
+    message.style.display = "block";
     var msgBlueprint = message.innerHTML;
     var index = 0;
     var fromMsg = "";

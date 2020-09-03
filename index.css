@@ -6,6 +6,7 @@ center {
   margin-top: 40vh;
 }
 center h1 {
+  display: none;
   font-size: 10em;
   font-weight: 600;
   text-shadow: 4px 4px 10px #0004;
