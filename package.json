@@ -1,17 +1,22 @@
 {
-	"name": "rrrconstruction",
+	"name": "websitetemplate",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"serve": "copy-and-watch --watch src/**/*.{html,json,png,jpg,jpeg} src/**/{fonts,images}/* build | sass --no-source-map --watch src/:build/ | tsc -w",
-		"build": "copy-and-watch src/**/*.{html,json,png,jpg,jpeg} src/**/{fonts,images}/* build | sass --no-source-map src/:build/ | tsc"
+		"serve": "npm run moveFiles -- --watch || npm run compileScss -- --watch || tsc -w || npm run host || echo Page is avaliable under http//:localhost:4280",
+		"build": "npm run moveFiles | npm run compileScss | tsc",
+		"compileScss": "sass --no-source-map src/:build/ -q",
+		"moveFiles": "copy-and-watch src/**/*.{html,json,png,jpg,jpeg} src/**/{fonts,images}/* build",
+		"host": "http-server ./build -p 4280 -d false -s",
+		"test": "\"concurrently \"npm run moveFiles -- --watch\" \"npm run compileScss -- --watch\" \"tsc -w -q\" \"echo Page is avaliable under http//:localhost:4280\""
 	},
 	"author": "",
 	"license": "ISC",
 	"devDependencies": {
 		"copy-and-watch": "^0.1.5",
-		"sass": "^1.26.10",
+		"http-server": "^0.12.3",
+		" ": "^1.26.10",
 		"typescript": "^4.0.2"
 	}
 }
